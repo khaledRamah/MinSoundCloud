@@ -1,0 +1,15 @@
+
+<div class="continer" style="margin-bottom: 70px">
+	<div class="jumbotron">
+		<ul>
+			<li *ngFor="let userStreamTrack of tracks.collection">
+				<div class="row">
+					<div>
+						<app-single-track [streamTrack] = "userStreamTrack.origin" ></app-single-track>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<button (click)="nextStreamPage(false)" class="btn btn-default col-xs-4  col-xs-offset-4 ">Load More</button>
+	</div>
+</div>

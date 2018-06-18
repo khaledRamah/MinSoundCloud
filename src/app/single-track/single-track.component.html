@@ -1,0 +1,22 @@
+<div class="row">
+	<div >
+		<div class="col-xs-4 col-md-3">
+			<img *ngIf= "streamTrack.artwork_url != null else defaultImage" [src]= "streamTrack.artwork_url">
+			<ng-template #defaultImage>
+				<img src="assets/default.png">
+			</ng-template>
+		</div>
+		<div>
+			<label class="col-xs-3 col-md-4" [innerText]="streamTrack.title"></label>
+			<div class="col-xs-3 col-md-2">
+				<label [innerText]="getDuration(streamTrack.duration)"></label>
+			</div >
+		</div>
+	</div>
+	<div class="col-xs-1 col-md-1">
+		<label (click)="pause()" *ngIf= "isCurrenTrackPlayed() else pauseIcon" class="glyphicon glyphicon-pause" ></label>
+		<ng-template #pauseIcon>
+			<label (click)="play()" class=" glyphicon glyphicon-play" ></label>
+		</ng-template>
+	</div>
+</div>

@@ -1,0 +1,45 @@
+import {User} from '../Models/User';
+
+export class Track {
+  id: number;
+  created_at: string;
+  user_id: number;
+  duration: number;
+  commentable: boolean;
+  state: string;
+  sharing: string;
+  tag_list: string;
+  permalink: string;
+  description: boolean;
+  streamable: boolean;
+  downloadable: string;
+  genre: string;
+  release: string;
+  purchase_url: string;
+  label_id: string;
+  label_name: string;
+  isrc: string;
+  video_url: string;
+  track_type: string;
+  key_signature: string;
+  bpm: string;
+  title: string;
+  release_year: string;
+  release_month: string;
+  release_day: string;
+  original_format: string;
+  original_content_size: number;
+  license: string;
+  uri: string;
+  permalink_url: string;
+  artwork_url: string;
+  waveform_url: string;
+  user: User;
+  stream_url: string;
+  download_url: string;
+  playback_count: number;
+  download_count: number;
+  favoritings_count: number;
+  comment_count: number;
+  attachments_uri: string;
+}
